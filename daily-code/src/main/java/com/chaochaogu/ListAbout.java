@@ -3,6 +3,7 @@ package com.chaochaogu;
 import com.google.common.collect.Lists;
 
 import java.util.Iterator;
+import java.util.List;
 import java.util.stream.Collectors;
 
 /**
@@ -12,7 +13,7 @@ import java.util.stream.Collectors;
 public class ListAbout {
     public static void main(String[] args) {
 
-        final java.util.List<String> list = Lists.newArrayList("1", "2", "3", "4");
+        List<String> list = Lists.newArrayList("1", "2", "3", "4");
 
         // wrong, cause ConcurrentModificationException
         list.forEach((e) -> {
