@@ -3,17 +3,16 @@ package com.chaochaogu;
 import com.google.common.collect.Lists;
 
 import java.util.Iterator;
-import java.util.List;
 import java.util.stream.Collectors;
 
 /**
  * @author chaochao Gu
  * @date 2019/12/4
  */
-public class ListTest {
+public class ListAbout {
     public static void main(String[] args) {
 
-        final List<String> list = Lists.newArrayList("1", "2", "3", "4");
+        final java.util.List<String> list = Lists.newArrayList("1", "2", "3", "4");
 
         // wrong, cause ConcurrentModificationException
         list.forEach((e) -> {
