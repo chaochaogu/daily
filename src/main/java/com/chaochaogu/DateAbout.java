@@ -1,5 +1,7 @@
 package com.chaochaogu;
 
+import org.joda.time.DateTime;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -18,5 +20,7 @@ public class DateAbout {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMddHHmm");
         LocalDateTime localDateTime = LocalDateTime.from(formatter.parse("201912311420"));
         Date fromDate = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
+        DateTime now = DateTime.now();
+        System.out.println(now.plusMonths(3).monthOfYear().get());
     }
 }
