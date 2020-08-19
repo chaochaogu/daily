@@ -1,9 +1,12 @@
 package com.chaochaogu;
 
 import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 /**
  * @author chaochao Gu
@@ -45,5 +48,13 @@ public class SortAbout {
         list2.add(4);
         list1.addAll(list2);
         System.out.println(list1);
+        TreeMap<Long, Integer> treeMap = Maps.newTreeMap();
+        treeMap.put(8745842L, 123);
+        treeMap.put(8745838L, 321);
+        System.out.println("treeMap" + treeMap);
+        Map<Long, Integer> hashMap = Maps.newHashMap();
+        hashMap.put(8745842L, 123);
+        hashMap.put(8745838L, 321);
+        System.out.println("hashMap" + hashMap);
     }
 }
