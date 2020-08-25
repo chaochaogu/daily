@@ -1,4 +1,4 @@
-package com.chaochaogu;
+package com.chaochaogu.daily;
 
 import com.google.common.collect.Lists;
 

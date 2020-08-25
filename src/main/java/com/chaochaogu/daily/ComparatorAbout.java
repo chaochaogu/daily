@@ -1,4 +1,4 @@
-package com.chaochaogu;
+package com.chaochaogu.daily;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

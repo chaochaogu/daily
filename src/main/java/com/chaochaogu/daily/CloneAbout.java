@@ -1,4 +1,4 @@
-package com.chaochaogu;
+package com.chaochaogu.daily;
 
 /**
  * Object的clone方法默认为浅拷贝（shallow copy）
