@@ -1,0 +1,23 @@
+logging:
+  level:
+    root: INFO
+    org.springframework: INFO
+    io.terminus.session: ERROR
+    com.alibaba.dubbo: ERROR
+    com.pousheng: DEBUG
+  file:
+    path: logs
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF8&useSSL=false
+    username: root
+    password: 123456
+    continue-on-error: false
+
+mybatis:
+  mapper-locations: classpath*:mapper/*Mapper.xml
+  type-aliases-package: >
+   io.terminus.parana.(item|shop|category|spu|brand|delivery).model,
+   com.pousheng.item.model,com.pousheng.shop.model,com.pousheng.stuffybag.model
