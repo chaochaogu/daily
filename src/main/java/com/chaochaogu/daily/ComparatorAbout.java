@@ -1,10 +1,9 @@
 package com.chaochaogu.daily;
 
+import com.google.common.collect.Lists;
+
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author chaochao Gu
@@ -24,6 +23,17 @@ public class ComparatorAbout {
         System.out.println("unsorted response" + "\n" + response);
         response.dateList.sort(Comparator.comparing(date -> date));
         System.out.println("sorted response" + "\n" + response);
+        List<Integer> numList = Lists.newArrayListWithCapacity(5);
+        for (int i = 0; i < 5; i++) {
+            numList.add(i + 1);
+        }
+        Collections.sort(numList, new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o2 - o1;
+            }
+        });
+        System.out.println(numList);
     }
 
     public static class Response {
