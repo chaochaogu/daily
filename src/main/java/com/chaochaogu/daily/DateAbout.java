@@ -22,5 +22,10 @@ public class DateAbout {
         Date fromDate = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
         DateTime now = DateTime.now();
         System.out.println(now.plusMonths(3).monthOfYear().get());
+        // jodaTime与java date转换
+        DateTime jodaTime = new DateTime(new Date());
+        jodaTime.isAfterNow();
+        jodaTime.isBeforeNow();
+        jodaTime.plusHours(3);
     }
 }
