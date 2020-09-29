@@ -61,6 +61,8 @@ public class ListAbout {
             list1.add(i);
         }
         System.out.println(Iterables.limit(list1, 20));
+        // 转换成list
+        list1 = Lists.newArrayList(Iterables.limit(list1, 10));
         // list分页
         Iterable<List<Integer>> partition = Iterables.partition(list1, 3);
     }
