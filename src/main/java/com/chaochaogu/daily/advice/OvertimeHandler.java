@@ -1,4 +1,4 @@
-package com.chaochaogu.daily.timeadvice;
+package com.chaochaogu.daily.advice;
 
 /**
  * 方法执行超时处理器

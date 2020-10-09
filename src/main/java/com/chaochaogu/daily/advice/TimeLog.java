@@ -1,4 +1,4 @@
-package com.chaochaogu.daily.timeadvice;
+package com.chaochaogu.daily.advice;
 
 import java.lang.annotation.*;
 

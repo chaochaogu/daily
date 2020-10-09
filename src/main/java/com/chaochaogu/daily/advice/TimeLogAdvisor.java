@@ -1,4 +1,4 @@
-package com.chaochaogu.daily.timeadvice;
+package com.chaochaogu.daily.advice;
 
 import com.google.common.base.Stopwatch;
 import lombok.extern.slf4j.Slf4j;
@@ -29,7 +29,7 @@ public class TimeLogAdvisor {
     @Autowired(required = false)
     private OvertimeHandler overTimeHandler;
 
-    @Pointcut("@annotation(com.chaochaogu.daily.timeadvice.TimeLog)")
+    @Pointcut("@annotation(com.chaochaogu.daily.advice.TimeLog)")
     public void timeLogPointCut() {
     }
 
