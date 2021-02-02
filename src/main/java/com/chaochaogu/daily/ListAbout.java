@@ -1,5 +1,6 @@
 package com.chaochaogu.daily;
 
+import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
 
 import java.util.Iterator;
@@ -53,5 +54,14 @@ public class ListAbout {
         // list去重
         list.stream().distinct().collect(Collectors.toList());
         list.forEach(System.out::println);
+
+        // list取前多少个
+        List<Integer> list1 = Lists.newArrayList();
+        for (int i = 0; i < 15; i++) {
+            list1.add(i);
+        }
+        System.out.println(Iterables.limit(list1, 20));
+        // list分页
+        Iterable<List<Integer>> partition = Iterables.partition(list1, 3);
     }
 }
