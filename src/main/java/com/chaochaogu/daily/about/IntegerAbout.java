@@ -1,4 +1,4 @@
-package com.chaochaogu.daily;
+package com.chaochaogu.daily.about;
 
 /**
  * 自动装箱的陷阱

@@ -1,4 +1,4 @@
-package com.chaochaogu.daily;
+package com.chaochaogu.daily.about;
 
 import com.google.common.collect.Lists;
 import org.joda.time.DateTime;
@@ -42,5 +42,14 @@ public class DateAbout {
         times.add("2020-09-23 11:23:34");
         times.sort((v1, v2) -> LocalDateTime.from(pattern.parse(v2)).compareTo(LocalDateTime.from(pattern.parse(v1))));
         System.out.println(times);
+        System.out.println(new DateTime(
+                new Date()).withTimeAtStartOfDay().plusHours(12).toDate().getTime());
+
+        System.out.println("test before now");
+        String createdStr = "2021-02-05 14:38:26";
+        String nowStr = "2021-02-05 15:08:59";
+        System.out.println(jodaFormatter.parseDateTime(createdStr).plusMinutes(30).isBefore(jodaFormatter.parseDateTime(nowStr)));
+        String fakeCreatedStr = "2021-02-05 15:25:23";
+        System.out.println(jodaFormatter.parseDateTime(fakeCreatedStr));
     }
 }

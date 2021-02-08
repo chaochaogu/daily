@@ -1,4 +1,4 @@
-package com.chaochaogu.daily;
+package com.chaochaogu.daily.about;
 
 import java.util.Arrays;
 
@@ -14,6 +14,8 @@ public class SystemAbout {
         System.arraycopy(strArr, 0, copy, 2, 6);
         System.out.println(Arrays.toString(copy));
         System.gc();
+
+        System.out.println(Runtime.getRuntime().availableProcessors());
     }
 
 }

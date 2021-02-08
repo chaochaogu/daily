@@ -1,4 +1,4 @@
-package com.chaochaogu.daily;
+package com.chaochaogu.daily.about;
 
 import java.util.concurrent.Executor;
 

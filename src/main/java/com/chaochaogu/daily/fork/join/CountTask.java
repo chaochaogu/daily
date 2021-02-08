@@ -9,13 +9,13 @@ import java.util.concurrent.RecursiveTask;
  * @author chaochao Gu
  * @date 2020/9/23
  */
-public class DemoTask extends RecursiveTask<Integer> {
+public class CountTask extends RecursiveTask<Integer> {
     private List<Integer> list;
     private int start;
     private int end;
     public static final int THRESHOLD = 100;
 
-    public DemoTask(List<Integer> list, int start, int end) {
+    public CountTask(List<Integer> list, int start, int end) {
         this.list = list;
         this.start = start;
         this.end = end;
@@ -27,11 +27,14 @@ public class DemoTask extends RecursiveTask<Integer> {
             return count(list);
         } else {
             System.out.println("任务分解");
+            // 如果任务大于阈值，就分裂成两个子任务计算
             int middle = (start + end) / 2;
-            DemoTask left = new DemoTask(list, start, middle);
-            DemoTask right = new DemoTask(list, middle, end);
+            CountTask left = new CountTask(list, start, middle);
+            CountTask right = new CountTask(list, middle, end);
+            // 执行子任务
             left.fork();
             right.fork();
+            // 等待子任务执行完，并得到结果
             return left.join() + right.join();
         }
     }

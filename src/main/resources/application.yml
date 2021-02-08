@@ -8,6 +8,9 @@ logging:
   file:
     path: logs
 
+server:
+  port: 8888
+
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver

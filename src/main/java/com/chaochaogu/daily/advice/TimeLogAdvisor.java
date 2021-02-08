@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
  * @date 2020-03-21 12:42 下午
  */
 @Aspect
-@Component
+//@Component
 @Slf4j
 public class TimeLogAdvisor {
 

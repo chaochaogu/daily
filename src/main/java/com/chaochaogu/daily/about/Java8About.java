@@ -1,4 +1,4 @@
-package com.chaochaogu.daily;
+package com.chaochaogu.daily.about;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
