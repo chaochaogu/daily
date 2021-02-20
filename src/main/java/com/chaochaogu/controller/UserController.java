@@ -1,13 +1,12 @@
 package com.chaochaogu.controller;
 
+import com.chaochaogu.model.Address;
 import com.chaochaogu.model.User;
+import com.chaochaogu.service.IAddressService;
 import com.chaochaogu.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author chaochao Gu
@@ -20,11 +19,22 @@ public class UserController {
 
     @Autowired
     private IUserService userService;
+    @Autowired
+    private IAddressService addressService;
 
     @RequestMapping("/queryById/{id}")
     public User queryUserById(@PathVariable("id") Integer id) {
         log.info("web query user by id {}", id);
         return userService.queryUserById(id);
+    }
+
+    @GetMapping("/multi")
+    public String testMultiDatasource(){
+        User user = userService.queryUserById(1);
+        log.info("user in db1:{}", user);
+        Address address = addressService.queryById(1L);
+        log.info("address in db2:{}", address);
+        return "success";
     }
 
     @RequestMapping("/save")

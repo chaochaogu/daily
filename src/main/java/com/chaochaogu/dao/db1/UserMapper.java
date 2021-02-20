@@ -1,4 +1,4 @@
-package com.chaochaogu.dao;
+package com.chaochaogu.dao.db1;
 
 import com.chaochaogu.model.User;
 import org.apache.ibatis.annotations.Mapper;

@@ -1,6 +1,6 @@
 package com.chaochaogu.service.impl;
 
-import com.chaochaogu.dao.UserMapper;
+import com.chaochaogu.dao.db1.UserMapper;
 import com.chaochaogu.model.User;
 import com.chaochaogu.service.IUserService;
 import lombok.extern.slf4j.Slf4j;

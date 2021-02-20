@@ -1,4 +1,4 @@
-package com.chaochaogu.daily;
+package com.chaochaogu.daily.about;
 
 import com.chaochaogu.model.User;
 import com.fasterxml.jackson.core.JsonProcessingException;

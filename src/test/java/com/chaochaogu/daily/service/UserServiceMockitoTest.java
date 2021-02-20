@@ -1,7 +1,7 @@
 package com.chaochaogu.daily.service;
 
 import com.chaochaogu.DailyApplication;
-import com.chaochaogu.dao.UserMapper;
+import com.chaochaogu.dao.db1.UserMapper;
 import com.chaochaogu.model.User;
 import com.chaochaogu.service.impl.UserServiceImpl;
 import org.junit.Before;
