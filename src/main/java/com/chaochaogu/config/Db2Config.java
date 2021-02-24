@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import tk.mybatis.spring.annotation.MapperScan;
 
 import javax.sql.DataSource;
@@ -35,5 +36,15 @@ public class Db2Config {
     @Bean
     public SqlSessionTemplate sqlSessionTemplateDb2() throws Exception {
         return new SqlSessionTemplate(sqlSessionFactoryDb2());
+    }
+
+    /**
+     * 如果需要对此数据源进行事务管理，那么需要配置该事务管理器
+     *
+     * @return
+     */
+    @Bean
+    public DataSourceTransactionManager dataSourceTransactionManagerDb2() {
+        return new DataSourceTransactionManager(dataSourceDb2);
     }
 }
