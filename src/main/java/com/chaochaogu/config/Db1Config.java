@@ -17,8 +17,8 @@ import javax.sql.DataSource;
  * @author chaochao Gu
  * @date 2021/2/20
  */
-@Configuration
-@MapperScan(basePackages = {"com.chaochaogu.dao.db1"}, sqlSessionFactoryRef = "sqlSessionFactoryDb1")
+//@Configuration
+//@MapperScan(basePackages = {"com.chaochaogu.dao.db1"}, sqlSessionFactoryRef = "sqlSessionFactoryDb1")
 public class Db1Config {
 
     @Autowired

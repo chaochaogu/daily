@@ -11,7 +11,7 @@ import javax.sql.DataSource;
  * @author chaochao Gu
  * @date 2021/2/20
  */
-@Configuration
+//@Configuration
 public class DatasourceConfig {
 
     @Bean(name = "db1")
