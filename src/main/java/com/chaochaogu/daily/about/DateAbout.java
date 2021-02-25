@@ -8,7 +8,6 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 
@@ -51,5 +50,9 @@ public class DateAbout {
         System.out.println(jodaFormatter.parseDateTime(createdStr).plusMinutes(30).isBefore(jodaFormatter.parseDateTime(nowStr)));
         String fakeCreatedStr = "2021-02-05 15:25:23";
         System.out.println(jodaFormatter.parseDateTime(fakeCreatedStr));
+
+        org.joda.time.format.DateTimeFormatter UTCFT = DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+        String UTCTime = "2017-11-30T10:41:44.651Z";
+        System.out.println(UTCFT.parseDateTime(UTCTime));
     }
 }
