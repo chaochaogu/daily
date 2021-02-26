@@ -51,10 +51,10 @@ public class Db2Datasource4jtaConfig {
     }
 
     @Bean
-    public SqlSessionFactory sqlSessionFactoryDb2(@Qualifier("db1DataSource") DataSource db2DataSource) throws Exception {
+    public SqlSessionFactory sqlSessionFactoryDb2(@Qualifier("db2DataSource") DataSource db2DataSource) throws Exception {
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
         factoryBean.setDataSource(db2DataSource);
-        factoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mapper/db1/*.xml"));
+        factoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mapper/db2/*.xml"));
         return factoryBean.getObject();
     }
 
