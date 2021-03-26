@@ -138,3 +138,4 @@ typings/
 *.iml
 */target
 */META-INF
+application-loc.yml
