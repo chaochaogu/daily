@@ -44,7 +44,7 @@ public class UserController {
         return "success";
     }
 
-    @RequestMapping("/save")
+    @PostMapping("/save")
     public boolean saveUser(@RequestBody User user) {
         log.info("web save user {}", user);
         return userService.saveUser(user);

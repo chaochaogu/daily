@@ -18,7 +18,7 @@
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"    
                         connectionURL="jdbc:mysql://127.0.0.1:3306/test"
                         userId="root"
-                        password="123456">
+                        password="root">
         </jdbcConnection>    
     
         <!--      
@@ -52,7 +52,7 @@
     
     
         <!-- 列出要生成代码的所有表，这里配置的是不生成Example文件 -->    
-        <table tableName="address" domainObjectName="Address"
+        <table tableName="rpt_md_delivery_refund" domainObjectName="RptMdDeliveryRefund"
                enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" selectByExampleQueryId="false" >
             <property name="useActualColumnNames" value="false"/>    

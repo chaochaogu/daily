@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Job1 {
 
-    @Scheduled(cron = "0/5 * * * * ?")
+//    @Scheduled(cron = "0/5 * * * * ?")
     public void doJob1() {
         System.out.println(Thread.currentThread().getName() + " do job1 ...");
     }
