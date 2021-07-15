@@ -78,4 +78,17 @@ public class UserController {
         response.setHeader("Content-disposition", "attachment;filename*=utf-8''" + fileName + ".xlsx");
         EasyExcel.write(response.getOutputStream(), UserExportVO.class).sheet("模板").doWrite(Lists.newArrayList(user));
     }
+
+    /**
+     * 测试springMVC传参
+     *
+     * @param status
+     * @param ids
+     * @return
+     */
+    @PostMapping("spring/mvc")
+    public String testSpringMVC(@RequestParam String status, @RequestParam List<Long> ids) {
+        System.out.println("status is " + status + ", ids are " + ids);
+        return "success";
+    }
 }

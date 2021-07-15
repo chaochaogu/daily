@@ -18,8 +18,8 @@ import javax.sql.DataSource;
  * @author chaochao gu
  * @date 2021/2/25
  */
-@Configuration
-@MapperScan(basePackages = {"com.chaochaogu.dao.db2"}, sqlSessionFactoryRef = "sqlSessionFactoryDb2")
+//@Configuration
+//@MapperScan(basePackages = {"com.chaochaogu.dao.db2"}, sqlSessionFactoryRef = "sqlSessionFactoryDb2")
 public class Db2Datasource4jtaConfig {
 
     @Value("${spring.datasource.db2.jdbc-url}")
