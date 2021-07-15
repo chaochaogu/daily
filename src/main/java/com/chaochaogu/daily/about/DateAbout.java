@@ -27,6 +27,8 @@ public class DateAbout {
         System.out.println(now.plusMonths(3).monthOfYear().get());
         // jodaTime与java date转换
         DateTime jodaTime = new DateTime(new Date());
+        // 指定特定日期
+        jodaTime.withDayOfMonth(4);
         jodaTime.isAfterNow();
         jodaTime.isBeforeNow();
         jodaTime.plusHours(3);
